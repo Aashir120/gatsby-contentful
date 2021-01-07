@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 
-export const query = graphql `
+export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
@@ -30,29 +30,28 @@ export const query = graphql `
 `
 
 const BlogPost = props => {
-    return ( <
-        Layout >
-        <
-        SEO title = { props.data.contentfulBlogPost.title }
-        /> <
-        Link to = "/blog/" > Visit the Blog Page < /Link> <
-        div className = "content" >
-        <
-        h1 > { props.data.contentfulBlogPost.title } < /h1> <
-        span className = "meta" >
-        Posted on { props.data.contentfulBlogPost.publishedDate } <
-        /span>
+  return (
+    <Layout>
+      <SEO title={props.data.contentfulBlogPost.title} />
+      <Link to="/blog/">Visit the Blog Page</Link>
+      <div className="content">
+        <h1>{props.data.contentfulBlogPost.title}</h1>
+        <span className="meta">
+          Posted on {props.data.contentfulBlogPost.publishedDate}
+        </span>
 
         {
-            props.data.contentfulBlogPost.featuredImage && ( <
-                img src = { props.data.contentfulBlogPost.featuredImage[0].file.url }
+            props.data.contentfulBlogPost.featuredImage && ( 
+              <img
+                src={props.data.contentfulBlogPost.featuredImage[0].file.url}
                 alt = { props.data.contentfulBlogPost.title }
                 />
             )
-        } { documentToReactComponents(JSON.parse(props.data.contentfulBlogPost.body.raw)) } <
-        /div> <
-        /Layout>
-    )
+        }
+        { documentToReactComponents(JSON.parse(props.data.contentfulBlogPost.body.raw)) } 
+      </div>
+    </Layout>
+  )
 }
 
 export default BlogPost
