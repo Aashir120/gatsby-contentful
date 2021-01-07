@@ -47,37 +47,31 @@ export default class Header extends Component {
 
     render() {
         const NavLinks = () =>
-            this.props.links.map((link, index) => ( <
-                a key = { index }
-                href = { link.to } > { link.name } <
-                /a>
+            this.props.links.map((link, index) => ( 
+                <a key = { index }
+                href = { link.to } > { link.name } 
+                </a>
             ));
-        return ( <
-            Transition >
-            <
-            StyledNavbar className = { this.state.show ? "active" : "hidden" } >
-            <
-            IconButton className = { styles.icon }
+        return ( 
+        <Transition >
+            <StyledNavbar className = { this.state.show ? "active" : "hidden" } >
+            <IconButton className = { styles.icon }
             edge = "start"
             color = "inherit" >
-            <
-            MenuIcon className = { styles.iconi }
-            />   <
-            /IconButton>   <
-            Typography variant = "h6"
+            <MenuIcon className = { styles.iconi }
+            />  
+            </IconButton>  
+            <Typography variant = "h6"
             className = { styles.title } >
-            <
-            a className = "brand"
-            href = "/" > { this.props.brand.name } <
-            /a>   <
-            /Typography>   <
-            nav className = { styles.link } >
-            <
-            NavLinks / >
-            <
-            /nav>   <
-            /StyledNavbar>   <
-            /Transition>
+            <a className = "brand"
+            href = "/" > { this.props.brand.name } 
+            </a>  
+            </Typography>  
+            <nav className = { styles.link } >
+            <NavLinks />
+            </nav>  
+            </StyledNavbar>  
+            </Transition>
         );
     }
 }
