@@ -1,11 +1,15 @@
 require("dotenv").config()
 module.exports = {
+    pathPrefix: `/blog`,
     siteMetadata: {
         title: `Gatsby Blog Site`,
         description: `Write your site description here!`,
         author: `@ibaslogic`,
     },
     plugins: [
+        `gatsby-plugin-offline`,
+        "gatsby-plugin-typescript",
+        `gatsby-plugin-material-ui`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
@@ -21,6 +25,20 @@ module.exports = {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
                 forceFullSync: true,
+            },
+        },
+        {
+            resolve: "gatsby-plugin-firebase",
+            options: {
+                credentials: {
+                    apiKey: process.env.apiKey,
+                    authDomain: process.env.authDomain,
+                    projectId: process.env.projectId,
+                    storageBucket: process.env.storageBucket,
+                    messagingSenderId: process.env.messagingSenderId,
+                    appId: process.env.appId,
+                    measurementId: process.env.measurementId
+                },
             },
         },
         `gatsby-transformer-sharp`,

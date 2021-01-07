@@ -1,0 +1,40 @@
+.container {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.top {
+    margin-top: 10%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 860px) {
+    .top {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .top {
+        margin-top: 30%;
+    }
+}
+
+.featured {
+    width: 1300px;
+    height: 600px;
+}
+
+.button {
+    background-color: red !important;
+    color: #fff !important;
+    width: 300px !important;
+    font-weight: bold !important;
+    border-color: red !important;
+}
+
+.button:hover {
+    background-color: black !important;
+}

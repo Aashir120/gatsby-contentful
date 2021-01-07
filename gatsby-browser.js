@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import "firebase/auth";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import reduxProvider from "./reduxProvider";
 
-// You can delete this file if you're not using it
+export const wrapRootElement = reduxProvider;

@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    margin-top: 15%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 860px) {
+    .container {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .container {
+        margin-top: 30%;
+    }
+}
+
+.first {
+    display: flex;
+}
+
+.button {
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    border-color: red;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+.para {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.img {
+    width: 500px;
+    height: 500px;
+    animation: MoveUpDown 2s linear infinite;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.image {
+    margin-top: 150px;
+}
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .image {
+        width: 200px;
+        height: 200px;
+        margin-top: 700px
+    }
+}

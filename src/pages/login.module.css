@@ -1,0 +1,49 @@
+.container {
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.inputField {
+    margin-bottom: 20px !important;
+    padding: 10px 10px !important;
+}
+
+.formContainer {
+    border: 2px solid #006e6b !important;
+    padding: 20px 10px !important;
+    border-radius: 0.3rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.title {
+    font-size: 1.2rem !important;
+    color: #006e6b !important;
+    font-weight: bold !important;
+}
+
+.btn {
+    background-color: #006e6b !important;
+    color: #f7f7f7 !important;
+    width: 100% !important;
+}
+
+.error {
+    font-size: 1rem !important;
+    color: red !important;
+    font-weight: bold !important;
+}
+
+.Link {
+    margin-top: 10px !important;
+    font-size: 0.8rem !important;
+    color: rgb(75, 68, 68) !important;
+}
+
+.blogs {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+}

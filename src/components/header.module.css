@@ -1,0 +1,42 @@
+.icon {
+    margin-left: 10px !important;
+}
+
+.iconi {
+    font-size: 2rem !important;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.link a {
+    text-decoration: none !important;
+    color: black;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    letter-spacing: -1px;
+}
+
+.link a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 4px #019fb6;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.link a:hover:after {
+    transform: scaleX(1);
+}
+
+.link a:after {
+    transform-origin: 100% 50%;
+}
+
+.link a:after {
+    transform-origin: 0% 50%;
+}
