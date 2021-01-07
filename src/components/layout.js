@@ -26,32 +26,29 @@ const Layout = ({ children }) => {
     }
   `)
 
-    return ( <
-        >
-        <
-        Header brand = { brand }
+    return ( 
+      <>
+        <Header brand = { brand }
         links = { navlinks }
-        />  <
-        div style = {
+        /> 
+        <div style = {
             {
                 margin: `0 auto`,
                 maxWidth: '100%',
                 padding: `0 20px 10px`,
             }
         } >
-        <
-        main > { children } < /main>  <
-        footer style = {
+        <main > { children } </main> 
+        <footer style = {
             {
                 marginTop: `2rem`
             }
-        } > ©{ new Date().getFullYear() }, Built with { ` ` } <
-        a href = "https://www.gatsbyjs.com" > Gatsby < /a>  <
-        /footer>  <
-        /div>  <
-        Footer / >
-        <
-        />
+        } > ©{ new Date().getFullYear() }, Built with { ` ` } 
+        <a href = "https://www.gatsbyjs.com" > Gatsby </a> 
+        </footer> 
+        </div> 
+        <Footer />
+        </>
     )
 }
 
